@@ -35,6 +35,11 @@ public class FakePhoneActivity extends AppCompatActivity {
         Toast.makeText(this,missatge, Toast.LENGTH_LONG).show();
     }
 
-
+    public void esborra(View v) {
+        Button esborrar = (Button) v;
+        String num = number.getText().toString();
+        num = num.substring(0, (num.length() -1));
+        number.setText(num);
+    }
 
 }
