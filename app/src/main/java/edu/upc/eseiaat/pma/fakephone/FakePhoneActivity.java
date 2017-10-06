@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FakePhoneActivity extends AppCompatActivity {
 
@@ -26,7 +27,12 @@ public class FakePhoneActivity extends AppCompatActivity {
         String text = boto.getText().toString();
         String num = number.getText().toString();
         number.setText(num + text);
+    }
 
+    public void truca(View v) {
+        Button trucar = (Button) v;
+        String missatge = String.format("Trucant a %s", number.getText().toString());
+        Toast.makeText(this,missatge, Toast.LENGTH_LONG).show();
     }
 
 
