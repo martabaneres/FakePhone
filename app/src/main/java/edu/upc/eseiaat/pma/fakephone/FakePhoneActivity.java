@@ -42,4 +42,8 @@ public class FakePhoneActivity extends AppCompatActivity {
         number.setText(num);
     }
 
+    public void esborra_tot(View v) {
+        number.setText("");
+    }
+
 }
